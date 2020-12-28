@@ -36,6 +36,17 @@
   <body id="vantajs">
       <div class="centered">CRYSTAL BALL</div>
     
+      <script type="module">
+        import { App } from './app.js';
+
+        document.addEventListener("DOMContentLoaded", function(){
+            const app = new App();
+            window.app = app;
+        });
+    </script>
+
+
+
     <script src="index.js" async defer></script>
 
     <script>
