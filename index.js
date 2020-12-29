@@ -18,7 +18,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/theFuture', (req, res) => {
-  res.render('home2.ejs')
+  const start = Math.floor(Math.random() * 120)
+  const finish = start + 10
+  res.render('theFuture.ejs', { begin: start, end: finish})
   
 })
 
