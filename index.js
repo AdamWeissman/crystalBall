@@ -19,8 +19,13 @@ app.get('/', (req, res) => {
 
 app.get('/theFuture', (req, res) => {
   const start = Math.floor(Math.random() * 120)
-  const finish = start + 10
-  res.render('theFuture.ejs', { begin: start, end: finish})
+  const finish = start + 7
+  const arr = ['raleKODYeg0', 'QG7cWYyNN8I', 'B1E7h3SeMDk']
+  const changeMeUp = function(arr) {
+    return arr[Math.floor(Math.random() * arr.length)]
+  }(arr)
+  
+  res.render('theFuture.ejs', { begin: start, end: finish, theLink: changeMeUp})
   
 })
 
