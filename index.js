@@ -18,12 +18,12 @@ app.get('/', (req, res) => {
 })
 
 app.get('/theFuture', (req, res) => {
-  const start = Math.floor(Math.random() * 120)
-  const finish = start + 7
-  const arr = ['raleKODYeg0', 'QG7cWYyNN8I', 'B1E7h3SeMDk']
+  const start = 10 + Math.floor(Math.random() * 100)
+  const finish = start + 21
+  const hash = { equilibrium: 'raleKODYeg0', independenceDay: 'B1E7h3SeMDk', iAmLegend: 'dtKMEAXyPkg', soylentGreen: 'N_jGOKYHxaQ', metropolis: 'GrFBId1b8U0', worldWarZ: 'Md6Dvxdr0AQ', hungerGames1: 'mfmrPu43DF8', roboCop: 'NFWgbGVgozA', bladeRunner: 'eogpIG53Cis', bladeRunner2049: 'gCcx85zbxz4'}
   const changeMeUp = function(arr) {
     return arr[Math.floor(Math.random() * arr.length)]
-  }(arr)
+  }(Object.values(hash))
   
   res.render('theFuture.ejs', { begin: start, end: finish, theLink: changeMeUp})
   
