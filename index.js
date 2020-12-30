@@ -21,12 +21,12 @@ app.get('/', (req, res) => {
 })
 
 app.get('/theFuture', (req, res) => {
-  const start = 9 + Math.floor(Math.random() * 530);
-  const finish = start + 11 + Math.floor(Math.random() * 9);
+  const start = 12 + Math.floor(Math.random() * 530);
+  const finish = start + 13 + Math.floor(Math.random() * 21);
   const animationLength = (finish - start).toString();
   
   const oldHash = { equilibrium: 'raleKODYeg0', independenceDay: 'B1E7h3SeMDk', iAmLegend: 'dtKMEAXyPkg', worldWarZ: 'Md6Dvxdr0AQ'}
-  const hash = { dystopianMontage1245: 'A1ZHl8qqg4A', top10worldEnd1300: '38D90SWwLcU', top10underrated1300: 'Ut0SXRC0Kcw', top10Britsh10: 'YDKOwNN0BCA' }
+  const hash = { dystopianMontage1245: 'A1ZHl8qqg4A', top10worldEnd1300: '38D90SWwLcU', top10underrated1300: 'Ut0SXRC0Kcw', top10sciFi1317: 'vpO8sZDxOGI' }
   
   //this is for a single lnk
   const changeMeUp = function(arr) {

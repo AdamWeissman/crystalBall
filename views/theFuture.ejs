@@ -29,7 +29,7 @@
         </div> 
         <center>
           <form action="/" method="get">
-            <button class="glowButton"><h2>RETURN</h2></button>
+            <button id="hideMe" class="glowButton"><h2>RETURN</h2></button>
           </form>
         </center>
       </div>
@@ -41,6 +41,7 @@
     <script>
       document.getElementById('alterME').style.setProperty("animation", "clip <%=animationLength %>s");
       document.getElementById('alterME2').style.setProperty("animation", "blink <%=animationLength %>s alternate");
+      document.getElementById('hideMe').style.setProperty("animation", "blinkButton <%=animationLength * 2 %>s infinite alternate")
     </script>
     
     <script>
