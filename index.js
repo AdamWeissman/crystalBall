@@ -1,18 +1,18 @@
 const express = require("express");
 const app = express();
 const path = require("path")
+const PORT = process.env.PORT || 5000;
 
-// app.use((request, response) => {
-//   console.log("we got a new request")
-//   // response.send(`<iframe width="560" height="315" src="https://www.youtube.com/embed/raleKODYeg0?controls=0&amp;start=${Math.floor(Math.random() * 120)}" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
-//   response.send("testing")
-// })
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+  .get('/cool', (req, res) => res.send(cool()))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-
-app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, '/views'))
 
 app.get('/', (req, res) => {
   //res.sendFile(path.join(__dirname + '/index.html'))
@@ -76,10 +76,4 @@ app.get('/theFuture', (req, res) => {
   
 })
 
-
-
-
-app.listen(5000, () => {
-  console.log("listening on port 5000")
-})
 
