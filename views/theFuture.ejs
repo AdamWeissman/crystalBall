@@ -41,7 +41,33 @@
     <script>
       document.getElementById('alterME').style.setProperty("animation", "clip <%=animationLength %>s");
       document.getElementById('alterME2').style.setProperty("animation", "blink <%=animationLength %>s alternate");
-      document.getElementById('hideMe').style.setProperty("animation", "blinkButton <%=animationLength * 2 %>s infinite alternate")
+      // document.getElementById('hideMe').style.setProperty("animation", "blinkButton <%=animationLength * 2 %>s infinite alternate")
+      const x = document.getElementById('hideMe')
+      const z = ("<%=animationLength * 1000%>")
+      console.log(z)
+    
+
+      const loadUpWithDelay = (clickMe, delay) => {
+        return new Promise ((resolve) => {
+          setTimeout(() => {
+            console.log(delay)
+            resolve();
+          }, delay)
+        })
+      }
+
+      async function loadUpAfterDelay(clickThis, waitThisLong) {
+        await loadUpWithDelay(clickThis, waitThisLong);
+        console.log("afterAsync")
+        clickThis.click()
+      }
+
+      loadUpAfterDelay(x, z)
+
+      
+      
+      
+      
     </script>
     
     <script>
