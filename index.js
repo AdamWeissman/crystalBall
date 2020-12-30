@@ -32,9 +32,10 @@ app.get('/theFuture', (req, res) => {
   //this is for a sequence
   const sequence = (time, theHash) => {
     for (let i = 0; i < 3; i++) {
-      setTimeout(() => {
-       console.log (Object.values(theHash)[Math.floor(Math.random() * Object.values(theHash).length)])
-      }, time)
+      return ((Object.values(theHash)[Math.floor(Math.random() * Object.values(theHash).length)])
+      setTimeout(async (x) => {
+       await console.log("inside the time")
+      }, time * 1000))
     }
   }
 
