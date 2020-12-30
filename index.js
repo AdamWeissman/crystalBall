@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.get('/theFuture', (req, res) => {
   const start = 12 + Math.floor(Math.random() * 530);
-  const finish = start + 13 + Math.floor(Math.random() * 21);
+  const finish = start + 8 + Math.floor(Math.random() * 13);
   const animationLength = (finish - start).toString();
   
   const oldHash = { equilibrium: 'raleKODYeg0', independenceDay: 'B1E7h3SeMDk', iAmLegend: 'dtKMEAXyPkg', worldWarZ: 'Md6Dvxdr0AQ'}
