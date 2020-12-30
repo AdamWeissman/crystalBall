@@ -1,3 +1,46 @@
+
+
+.glowButton {
+  /*margin-top: 100px;*/
+  text-align: center;
+  /* display: block; */
+  background-color: black;
+  color: #fff;
+  margin: 10px;
+  border-radius: 7px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 13px rgb(255, 255, 255), 0 0 15px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 40px #00ff95,
+      0 0 70px #00d5ff, 0 0 80px #0ba9ca;
+  -webkit-animation: blinkButton 0.7s infinite alternate;
+  animation: blinkButton 0.7s infinite alternate;
+}
+
+
+@-webkit-keyframes blinkButton {
+  100% {
+    box-shadow: 0 0 3px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 40px #00ff95,
+      0 0 70px #00d5ff, 0 0 80px #0ba9ca;
+  }
+}
+
+@keyframes blinkButton {
+  100% {
+    box-shadow: 0 0 3px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 40px #00ff95,
+      0 0 70px #00d5ff, 0 0 80px #0ba9ca;
+  }
+
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+
+
+}
+
+
+
 .centered {
   position: fixed;
   top: 50%;
