@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 app.get('/theFuture', (req, res) => {
   const start = 10 + Math.floor(Math.random() * 100);
-  const finish = start + 20 + Math.floor(Math.random() * 13);
+  const finish = start + 5 + Math.floor(Math.random() * 13);
   const animationLength = (finish - start).toString();
   
   const hash = { equilibrium: 'raleKODYeg0', independenceDay: 'B1E7h3SeMDk', iAmLegend: 'dtKMEAXyPkg', metropolis: 'GrFBId1b8U0', worldWarZ: 'Md6Dvxdr0AQ'}
@@ -30,10 +30,15 @@ app.get('/theFuture', (req, res) => {
   }(Object.values(hash))
 
   //this is for a sequence
-  const sequence = () => {
-    const movies = []
-    
+  const sequence = (time, theHash) => {
+    for (let i = 0; i < 3; i++) {
+      setTimeout(() => {
+       console.log (Object.values(theHash)[Math.floor(Math.random() * Object.values(theHash).length)])
+      }, time)
+    }
   }
+
+  sequence(animationLength, hash)
 
 
   
