@@ -1,4 +1,3 @@
-
 .glowButton {
   /*margin-top: 100px;*/
   text-align: center;
@@ -38,9 +37,17 @@
 
 }
 
+.move {
+  animation: clip 10s infinite alternate;
+}
 
-
-
+.littleBigger {
+  text-align: center;
+  color: gold;
+  border: none;
+  font: 2.5em sans-serif;
+  animation: blink 12s infinite alternate;
+}
 
 .centered {
   position: fixed;
